@@ -6,4 +6,4 @@
 - Kinesis Data Analytics: real-time ETL / ML algorithms on streams
 - Kinesis Video Stream: real-time video stream to create ML
 applications
-- Flink
+- Flink: Managed service for [Apache Flink®](https://flink.apache.org/)
