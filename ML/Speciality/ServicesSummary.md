@@ -6,19 +6,58 @@
 - Flink: Managed service for [Apache Flink®](https://flink.apache.org/) [Apache Kafka Vs. Apache Flink]
 
 ### Here's a quick summary of all the services we've mentioned:
-- Glue Data Catalog & Crawlers: Metadata repositories for schemas and datasets in your account
-- Glue ETL: ETL Jobs as Spark programs, run on a serverless Spark Cluster
-- DynamoDB: NoSQL store
-- Redshift: Data Warehousing for OLAP, SQL language
-- Redshift Spectrum: Redshift on data in S3 (without the need to load it first in Redshift)
-- RDS / Aurora: Relational Data Store for OLTP, SQL language
-- ElasticSearch: index for your data, search capability, clickstream analytics
-- ElastiCache: data cache technology
-- Data Pipelines: Orchestration of ETL jobs between RDS, DynamoDB, S3. Runs on EC2 instances
-- Batch: batch jobs run as Docker containers - not just for data, manages EC2 instances for you
-- DMS: Database Migration Service, 1-to-1 CDC replication, no ETL
-- Step Functions: Orchestration of workflows, audit, retry mechanisms
-- EMR: Managed Hadoop Clusters
-- Quicksight: Visualization Tool
-- DeepLens: camera by Amazon
-- Athena: Serverless Query of your data
+Here's the classification of these services into Serverless and Non-Serverless:
+
+SERVERLESS SERVICES:
+1. AWS Glue
+   - Glue Data Catalog & Crawlers
+   - Glue ETL (serverless Spark)
+
+2. Amazon Athena
+   - Serverless query service
+
+3. AWS Step Functions
+   - Serverless workflow orchestration
+
+4. AWS Batch
+   - Serverless container orchestration (manages EC2 instances automatically)
+
+5. AWS QuickSight
+   - Serverless visualization service
+
+NON-SERVERLESS SERVICES (Require Infrastructure Management):
+1. Amazon EMR
+   - Managed Hadoop clusters
+   - Requires cluster management
+
+2. Amazon Redshift
+   - Requires cluster provisioning and management
+   - (Though Redshift Spectrum is serverless)
+
+3. Amazon RDS/Aurora
+   - Requires database instance management
+   - (Though Aurora Serverless is available as a serverless option)
+
+4. Amazon ElastiCache
+   - Requires cache node management
+
+5. Amazon ElasticSearch (now OpenSearch)
+   - Requires cluster management
+
+6. AWS Data Pipeline
+   - Runs on EC2 instances
+   - Requires infrastructure management
+
+7. AWS DMS
+   - Requires replication instance management
+
+8. Amazon DeepLens
+   - Physical hardware device
+
+HYBRID (Can be both depending on configuration):
+1. Amazon DynamoDB
+   - Serverless by default
+   - But requires capacity planning if using provisioned capacity mode
+   - Fully serverless when using on-demand capacity mode
+
+Note: Some services like Aurora and Redshift now offer serverless options, showing AWS's trend toward more serverless offerings.
