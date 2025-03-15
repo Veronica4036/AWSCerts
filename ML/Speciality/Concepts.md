@@ -78,7 +78,9 @@ Cons: Can potentially introduce noisy samples if not implemented carefully, and 
 
 #### KNN: Find K “nearest” (most similar) rows and average their values
 - Assumes numerical data, not categorical
-- There are ways to handle categorical data (Hamming distance), but categorical data is probably better served by…
+- There are ways to handle categorical data (Hamming distance),
+
+## but categorical data is probably better served by…
 
 #### Deep Learning
 - Build a machine learning model to impute data for your machine learning model!
