@@ -89,3 +89,23 @@ Cons: Can potentially introduce noisy samples if not implemented carefully, and 
 #### Regression
 - Find linear or non-linear relationships between the missing feature and other features
 - Most advanced technique: MICE (Multiple Imputation by Chained Equations)
+
+
+## Underfitting & Overfitting 
+
+underfitting occurs when a model is too simple to capture the underlying patterns in the data, 
+while overfitting happens when a model learns the training data too well, including noise and irrelevant details, leading to poor generalization to new, unseen data
+
+
+### Regularization techniques to prevent Overfitting:
+- Dropout
+- Early Stopping (kitna hi train karoge bhai, ab rukh bhi jao)
+
+
+## Tuning Neural Networks
+- Small batch sizes tend to not get stuck in local minima
+- Large batch sizes can converge on the wrong solution at
+random
+- Large learning rates can overshoot the correct solution
+- Small learning rates increase training time
+
