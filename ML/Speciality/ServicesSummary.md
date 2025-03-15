@@ -1,11 +1,15 @@
 ### Kinesis Services
 - Kinesis Data Stream: create **real-time** machine learning applications data streams, need capacity planning, real-time applications (extra - Storage,Replay, Flink can only read from here)
+<img width="1199" alt="image" src="https://github.com/user-attachments/assets/4f2125c9-c0ab-4e03-8303-560a980a9008" />
+
 - Kinesis Data Firehose: **near-real time** data ingestion to S3, Redshift, ElasticSearch, Splunk
+![image](https://github.com/user-attachments/assets/1c797c83-e696-4845-a47b-c2940f7b8a43)
+
 - Kinesis Data Analytics: real-time ETL / ML algorithms on streams
 - Kinesis Video Stream: real-time video stream to create ML applications
 - Flink: Managed service for [Apache Flink®](https://flink.apache.org/) [Apache Kafka Vs. Apache Flink]
 
-### Here's a quick summary of all the services we've mentioned:
+### Summary of all the services required for Exam:
 Here's the classification of these services into Serverless and Non-Serverless:
 
 #### SERVERLESS SERVICES:
@@ -34,16 +38,10 @@ Here's the classification of these services into Serverless and Non-Serverless:
 - Only the Ground Truth answer produces the positive or negative labels we need
 - Semantic Segmentation: a computer vision system **that can classify every pixel** in an image. It uses MXNet and the ResNet architecture to do this.
 
-
-
-
-
-
-
-
-
-
-
+### Use Cases
+- The SageMakerEstimator classes allow tight integration between Spark and SageMaker for several models including XGBoost, and offers the simplest solution.
+- Only the Ground Truth answer produces the positive or negative labels we needc
+- You start with a machine learning model already built with DarkNet, Keras, MXNet, PyTorch, TensorFlow, TensorFlow-Lite, ONNX, or XGBoost and trained in Amazon SageMaker or anywhere else. Then you choose your target hardware platform, which can be a SageMaker hosting instance or an edge device based on processors from Ambarella, Apple, ARM, Intel, MediaTek, Nvidia, NXP, Qualcomm, RockChip, or Texas Instruments.
 
 
 
