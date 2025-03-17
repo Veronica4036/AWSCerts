@@ -79,6 +79,24 @@ Defines specific arrangement of layers, padding, and hyperparameters
 - GoogLeNet: Even deeper, but with better performance. Introduces inception modules (groups of convolution layers)
 - ResNet (Residual Network): Even deeper – maintains performance via skip connections.
 
+## Tuning Neural Networks
+- Small batch sizes tend to not get stuck in local minima
+- Large batch sizes can converge on the wrong solution at
+random
+- Large learning rates can overshoot the correct solution
+- Small learning rates increase training time
+
+
+## Underfitting & Overfitting 
+
+underfitting occurs when a model is too simple to capture the underlying patterns in the data, 
+while overfitting happens when a model learns the training data too well, including noise and irrelevant details, leading to poor generalization to new, unseen data
+
+
+### Regularization techniques to prevent Overfitting:
+- Dropout
+- Early Stopping (kitna hi train karoge bhai, ab rukh bhi jao)
+
 ### Measuring your Models - [Never Forget Again! // Precision vs Recall with a Clear Example of Precision and Recall](https://www.youtube.com/watch?v=qWfzIYCvBqo)
 
 #### Recall (Sensitivity)
@@ -113,24 +131,31 @@ F1 = 2TP / (2TP + FP + FN)
 - Represents: Harmonic mean of precision and sensitivity
 - Best used: When both precision and recall are important
 
+### Ensemble methods
+- XGBoost is the latest hotness
+- Boosting generally yields better accuracy
+- But bagging avoids overfitting
+- Bagging is easier to parallelize
+- So, depends on your goal
 
+## Neural Topic Model
 
+### Latent Dirichlet Allocation (LDA)
+- Cluster customers based on purchases
+- Harmonic analysis in music
 
-## Underfitting & Overfitting 
+### K-Nearest-Neighbors
+- Find the K closest points to a sample point and return the average value
 
-underfitting occurs when a model is too simple to capture the underlying patterns in the data, 
-while overfitting happens when a model learns the training data too well, including noise and irrelevant details, leading to poor generalization to new, unseen data
+### K-Means
+Divide data into K groups, where members of a group are as similar as possible to each other
+- You define what “similar” means
+- Measured by Euclidean distance
 
+### Principal Component Analysis
+Dimensionality reduction - Project higher-dimensional data (lots of features) into lower-dimensional (like a 2D plot) while minimizing loss of information
 
-### Regularization techniques to prevent Overfitting:
-- Dropout
-- Early Stopping (kitna hi train karoge bhai, ab rukh bhi jao)
+### IP Insights
+- Identifies suspicious behavior from IP addresses
 
-
-## Tuning Neural Networks
-- Small batch sizes tend to not get stuck in local minima
-- Large batch sizes can converge on the wrong solution at
-random
-- Large learning rates can overshoot the correct solution
-- Small learning rates increase training time
-
+Markov decision processes (MDPs) provide a decision making mathematical framework for modeling decision making in situations random where outcomes are partly random and partly under the control of a decision maker.
