@@ -37,6 +37,13 @@ Here's the classification of these services into Serverless and Non-Serverless:
 - DeepLens: camera by Amazon 
 - Only the Ground Truth answer produces the positive or negative labels we need
 - Semantic Segmentation: a computer vision system **that can classify every pixel** in an image. It uses MXNet and the ResNet architecture to do this.
+- Machine Learning Insights
+• Anomaly detection
+• Forecasting
+• Auto-narratives
+
+### Full forms:
+SPICE - Data sets are imported into SPICE (Super-fast, Parallel, In-memory Calculation Engine)
 
 ### Use Cases
 - The SageMakerEstimator classes allow tight integration between Spark and SageMaker for several models including XGBoost, and offers the simplest solution.
