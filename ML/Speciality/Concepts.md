@@ -1,5 +1,54 @@
 ## Concepts
 
+### The Curse of Dimensionality
+Too many features can be a problem – leads to sparse data.
+Unsupervised dimensionality reduction techniques can also be employed to distill may features to fewer features.
+- PCA
+- K-Means
+
+## How do I handle missing data?
+
+#### KNN: Find K “nearest” (most similar) rows and average their values
+- Assumes numerical data, not categorical
+- There are ways to handle categorical data (Hamming distance),
+
+## but categorical data is probably better served by…
+
+#### Deep Learning
+- Build a machine learning model to impute data for your machine learning model!
+- Works well for categorical data. Really well. But it’s complicated.
+
+#### Regression
+- Find linear or non-linear relationships between the missing feature and other features
+- Most advanced technique: MICE (Multiple Imputation by Chained Equations)
+
+## How to deal with Imbalanced datasets 
+
+#### Undersampling:
+This technique reduces the number of samples in the majority class to balance the dataset. 
+
+    Example: Randomly removing instances from the majority class to match the number of instances in the minority class. 
+
+Pros: Can help prevent models from being biased towards the majority class. 
+Cons: Can lead to loss of potentially valuable information if important instances are removed. 
+
+#### Oversampling:
+This technique increases the number of samples in the minority class to balance the dataset. 
+
+    Example: Randomly duplicating instances from the minority class or generating synthetic samples. 
+
+Pros: Can help prevent models from being biased towards the majority class. 
+Cons: Can lead to overfitting if the minority class is oversampled excessively. 
+
+#### SMOTE (Synthetic Minority Over-sampling Technique):
+A specific oversampling technique that generates synthetic samples for the minority class by interpolating between existing minority class instances. 
+
+    How it works: SMOTE identifies the nearest neighbors of each minority class instance and creates new synthetic instances along the line connecting these neighbors. 
+
+Pros: Can help create a more balanced dataset without simply duplicating existing instances. 
+Cons: Can potentially introduce noisy samples if not implemented carefully, and may not be suitable for all datasets. 
+
+
 ### TF-IDF matrix
 Sentence 1: "Please call the number below"
 Sentence 2: "Please do not call us"
@@ -13,6 +62,22 @@ BIGRAMS (8 total):
 
 Total Features = 16 (8 unigrams + 8 bigrams) [(Number of unigrams + bigrams ..)]
 Matrix Dimensions = (2 rows (Number of documents), 16 columns (Total Features) )
+
+### Choosing an activation function
+- For multiple classification, use softmax on the output layer
+- RNN’s do well with Tanh
+- For everything else
+  - Start with ReLU
+  - If you need to do better, try Leaky ReLU
+  - Last resort: PReLU, Maxout
+  - Swish for really deep networks
+
+### Specialized CNN architectures
+Defines specific arrangement of layers, padding, and hyperparameters
+- LeNet-5: Good for handwriting recognition
+- AlexNet: Image classification, deeper than LeNet
+- GoogLeNet: Even deeper, but with better performance. Introduces inception modules (groups of convolution layers)
+- ResNet (Residual Network): Even deeper – maintains performance via skip connections.
 
 ### Measuring your Models - [Never Forget Again! // Precision vs Recall with a Clear Example of Precision and Recall](https://www.youtube.com/watch?v=qWfzIYCvBqo)
 
@@ -48,47 +113,7 @@ F1 = 2TP / (2TP + FP + FN)
 - Represents: Harmonic mean of precision and sensitivity
 - Best used: When both precision and recall are important
 
-## How to deal with Imbalanced datasets 
 
-#### Undersampling:
-This technique reduces the number of samples in the majority class to balance the dataset. 
-
-    Example: Randomly removing instances from the majority class to match the number of instances in the minority class. 
-
-Pros: Can help prevent models from being biased towards the majority class. 
-Cons: Can lead to loss of potentially valuable information if important instances are removed. 
-
-#### Oversampling:
-This technique increases the number of samples in the minority class to balance the dataset. 
-
-    Example: Randomly duplicating instances from the minority class or generating synthetic samples. 
-
-Pros: Can help prevent models from being biased towards the majority class. 
-Cons: Can lead to overfitting if the minority class is oversampled excessively. 
-
-#### SMOTE (Synthetic Minority Over-sampling Technique):
-A specific oversampling technique that generates synthetic samples for the minority class by interpolating between existing minority class instances. 
-
-    How it works: SMOTE identifies the nearest neighbors of each minority class instance and creates new synthetic instances along the line connecting these neighbors. 
-
-Pros: Can help create a more balanced dataset without simply duplicating existing instances. 
-Cons: Can potentially introduce noisy samples if not implemented carefully, and may not be suitable for all datasets. 
-
-## How do I handle missing data?
-
-#### KNN: Find K “nearest” (most similar) rows and average their values
-- Assumes numerical data, not categorical
-- There are ways to handle categorical data (Hamming distance),
-
-## but categorical data is probably better served by…
-
-#### Deep Learning
-- Build a machine learning model to impute data for your machine learning model!
-- Works well for categorical data. Really well. But it’s complicated.
-
-#### Regression
-- Find linear or non-linear relationships between the missing feature and other features
-- Most advanced technique: MICE (Multiple Imputation by Chained Equations)
 
 
 ## Underfitting & Overfitting 
