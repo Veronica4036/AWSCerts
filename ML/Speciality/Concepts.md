@@ -1,5 +1,37 @@
 ## Concepts
 
+### Different kinds of plots:
+**A box and whisker plot** (also called a box plot) is a graphical way to summarize and visualize data, particularly distributions of numeric data. It uses a box to represent the middle 50% of the data (the interquartile range), with lines extending from the box (whiskers) to show the range of the rest of the data. 
+
+Box plots are primarily used to show the distribution of a single variable, while **heatmaps** are used to display relationships between two or more variables. 
+
+### Data distributions:
+- A “normal distribution”
+- Poisson Distribution (discrete)
+- Binomial Distribution
+- Bernoulli Distribution (Binomial Distribution where n=1)
+
+Seasonality + Trends + Noise = Time Series
+
+### QuickSight Visual Types
+- AutoGraph
+- Bar Charts: For comparison and distribution (histograms)
+- Line graphs: For changes over time
+- Scatter plots, heat maps: For correlation
+- Pie graphs, tree maps: For aggregation
+- Pivot tables: For tabular data
+
+### Spark MLLib
+- Classification: logistic regression, naïve Bayes
+- Regression
+- Decision trees
+- Recommendation engine (ALS)
+- Clustering (K-Means)
+- LDA (topic modeling)
+- ML workflow utilities (pipelines, feature transformation,
+persistence)
+- SVD, PCA, statistics
+
 ### The Curse of Dimensionality
 Too many features can be a problem – leads to sparse data.
 Unsupervised dimensionality reduction techniques can also be employed to distill may features to fewer features.
