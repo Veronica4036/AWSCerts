@@ -1,3 +1,14 @@
+### EMR
+- Master node: manages the cluster(Single EC2 instance)
+- Core node: Hosts HDFS data and runs tasks. Can be scaled up & down, but with some risk
+- Task node: Runs tasks, does not host data. No risk of data loss when removing. Good use of spot instances
+
+EMR Storage
+- HDFS
+- EMRFS: access S3 as if it were HDFS. EMRFS Consistent View – Optional for S3 consistency(Uses DynamoDB to track consistency)
+- Local file system
+- EBS for HDFS
+
 ### Kinesis Services
 - Kinesis Data Stream: create **real-time** machine learning applications data streams, need capacity planning, real-time applications (extra - Storage,Replay, Flink can only read from here)
 <img width="1199" alt="image" src="https://github.com/user-attachments/assets/4f2125c9-c0ab-4e03-8303-560a980a9008" />
