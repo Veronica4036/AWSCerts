@@ -20,8 +20,28 @@ Get information on models using - aws bedrock get-foundation-model --model-ident
 
 <img width="660" height="406" alt="image" src="https://github.com/user-attachments/assets/da3dd93c-85db-4a7b-8d75-a538ff18de0f" />
 
-### Building a foundation model's GK
-Continued pre-training (CPT) adds broad, new domain knowledge (like finance or medicine) to a model using unlabeled data with self-supervised objectives, enhancing foundational understanding; while fine-tuning (SFT) specializes a model for specific tasks (Q&A, summarization) or behaviors (instruction following) using smaller, labeled datasets, adapting its output style without drastically changing core knowledge. 
+# [I NEED TO EDIT THIS] Fine Tuning Pre training 
+
+## Fine Tuning Techniques:
+
+### [LORA](https://www.youtube.com/watch?v=t1caDsMzWBk):
+<img width="400" height="400" alt="image" src="https://github.com/user-attachments/assets/415304ed-4cac-4418-930a-cc1372690c22" />
+<img width="400" height="400" alt="image" src="https://github.com/user-attachments/assets/f0391b48-82f5-470c-afbe-dd398807d885" />
+
+
+
+#
+--
+#
+
+#
+--
+#
+
+
+#
+--
+#
 
 # Explore when you are free:
 
